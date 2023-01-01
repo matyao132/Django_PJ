@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'generate_estimate',
     'snippet',
+    'macyao_blog',
 ]
 
 MIDDLEWARE = [
