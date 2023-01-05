@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+from .models import Post
 
-class Index(TemplateView):
-    template_name = "macyao_blog/base.html"
+class Index(ListView):
+    template_name = "macyao_blog/top.html"
+    model = Post
+    context_object_name = 'posts'

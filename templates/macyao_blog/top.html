@@ -1,7 +1,10 @@
-{% extends 'machao_blog/base.html' %}
+{% extends 'macyao_blog/base.html' %}
 {% block content %}
 {% load static %}
 {% block customcss  %}
 {% endblock customcss %}
-
+{% for item in posts %}
+{{item.title}}
+{{item.content}}
+{% endfor %}
 {% endblock %}
