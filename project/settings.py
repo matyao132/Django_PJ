@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'generate_estimate',
     'snippet',
     'macyao_blog',
+    'todo_react',
 ]
 
 MIDDLEWARE = [
