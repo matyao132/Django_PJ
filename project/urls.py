@@ -15,9 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import routers
+from todo_react import views
+
+
+router = routers.DefaultRouter()
+router.register(r'todos', views.TodoView, 'todo')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('macyao_blog.urls')),
-    path('generate_estimate/',include('generate_estimate.urls')),
+    path('', include('macyao_blog.urls')),
+    path('todo_api/', include(router.urls)),
+    path('generate_estimate/', include('generate_estimate.urls')),
 ]
